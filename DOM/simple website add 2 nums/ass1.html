@@ -1,0 +1,89 @@
+<!-- calculate simple interest total amount and then after amount with interest-->
+<!-- write backend logic then code in frontend then link both try async await and also try debouncing  -->
+
+<!-- html and js code -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"> 
+        <form id="interest-form">
+            <label for="principal">Principal</label>
+            <input type="number" id="principal" required><br><br>
+
+            <label for="rate">Rate (%)</label>
+            <input type="number" id="rate" required><br><br>
+
+            <label for="time">Time (Years)</label>
+            <input type="number" id="time" required><br><br>
+
+            <button type="submit">Calculate</button>
+        </form>
+
+        <div class="result" id="result">
+            Enter values to calculate Simple Interest. 
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('interest-form');
+        const resDiv = document.getElementById('result');
+
+        // debouncing
+        function debounce(func, delay){
+            let timer;
+            return function (...args){
+                clearTimeout(timer);
+                timer = setTimeout(() => func.apply(this, args), delay);
+            };
+        }
+
+        async function calcInterest (event) {
+            event.preventDefault();
+
+            const principal = parseFloat(document.getElementById('principal').value);
+            const rate = parseFloat(document.getElementbyId('rate').value);
+            const time = parseFloat(document.getElementById('time').value);
+
+            if(!principal || !rate || !time){
+                resDiv.innerHTML = "All fields are required";
+                return;
+            }
+
+            try{
+                const response = await fetch('http://localhost:3000/calcInterest', {
+                    method: 'POST',
+
+                });
+            }
+            catch(error){
+                
+            }
+        }
+
+    </script>
+
+</body>
+</html>

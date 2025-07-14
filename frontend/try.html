@@ -1,0 +1,62 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter</title>
+</head>
+<script>
+    function onButtonPress(){
+        const currentVal = document.getElementById("btn").innerHTML;
+        console.log(currentVal.split(" "));
+        const currCounter = currentVal.split(" ")[1];
+        let newCounter = parseInt(currCounter) + 1;
+        document.getElementById("btn").innerHTML = "Counter " + newCounter;
+    }
+</script>
+<body>
+    <button onclick="onButtonPress()" id="btn">Counter 0</button>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State/Re-render</title>
+</head>
+<body>
+    <div id="buttonParent"></div>
+    <script>
+
+        // In react, this is State
+        let state = {
+            count: 0
+        }
+
+        // In react, it is re-rendering 
+        function onButtonPress() {
+            state.count++;
+            buttonComponentReRender();
+        }
+
+        function buttonComponentReRender() {
+            document.getElementById("buttonParent").innerHTML = "";
+            const component = buttonComponent(state.count);
+            document.getElementById("buttonParent").appendChild(component);
+        }
+
+        // In react, it is Component
+        function buttonComponent() {
+            const button = document.createElement("button");
+            button.innerHTML = `Counter ${count}`;
+            button.setAttribute("onclick", `onButtonPress()`);
+            return button;
+        }
+
+        buttonComponentReRender();
+    </script>
+</body>
+</html>
+

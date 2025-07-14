@@ -1,0 +1,59 @@
+/* #heading {
+  color: blue;
+  background-color: blanchedalmond;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.ClassHeading {
+  color: rgb(128, 0, 255);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#buttonbagr {
+  color: rgb(255, 255, 255);
+  background-color: black;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: rgb(196, 213, 255) ;
+}
+
+button{
+    background-color: black;
+    color: whitesmoke;
+} */
+
+/* #box {
+  height: 200px;
+  width: 100px;
+  background-color: dodgerblue;
+  color: whitesmoke;
+  border: 5px solid black;
+} */
+
+/* .content {
+  color:red;
+}
+
+.newClass{
+  background-color: black;
+} */
+
+div{
+    height: 100px;
+    width: 100px;
+    background-color:deepskyblue;
+    color:antiquewhite;
+    border: 1px solid;
+}
+
+/* .dark{
+  background-color: black;
+  color:white;
+}
+
+.light{
+  background-color: white;
+  color:black;
+} */
