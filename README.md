@@ -1,6 +1,6 @@
 # JavaScript Learning Repository
 
-A comprehensive collection of JavaScript small exercises covering frontend development, backend APIs, databases and modern web development practices.
+A comprehensive collection of my JavaScript small exercises covering frontend development, backend APIs, databases and modern web development practices.
 
 ## 📁 Directory Structure
 
