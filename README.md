@@ -26,7 +26,6 @@ A comprehensive collection of my JavaScript small exercises covering frontend de
 - **Apna College Tutorials** (`/Javascript Apna College`) - Structured learning materials
 
 ### Prerequisites
-
 - Node.js (v14 or higher)
 - MongoDB (for database projects)
 - Git
